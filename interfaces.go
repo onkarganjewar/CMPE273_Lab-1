@@ -15,11 +15,11 @@ r float64
 
 
 type Rectangle struct {
-l,b float64
+l,w float64
 }
 
 func (r Rectangle) perimeter() float64 {
-return 2*(r.l+r.b)
+return 2*(r.l+r.w)
 }
 
 func (c Circle) perimeter() float64 {
@@ -35,16 +35,16 @@ func mea (ss Shape) float64 {
 }
 
 func main() {
-var rad, le, br float64
+var rad, le, wd float64
 fmt.Println("Enter the radius for a Circle")
 fmt.Scanf("%f",&rad);
 fmt.Println("Enter the length for a Rectangle")
 fmt.Scanf("%f",&le);
-fmt.Println("Enter the breadth for a Rectangle")
-fmt.Scanf("%f",&br);
+fmt.Println("Enter the width for a Rectangle")
+fmt.Scanf("%f",&wd);
 
 cc := Circle{rad}
-rr := Rectangle{le,br}
+rr := Rectangle{le,wd}
 
 fmt.Println(calc(cc))
 fmt.Println(mea(rr))
